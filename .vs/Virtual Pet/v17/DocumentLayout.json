@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\shahe\\Downloads\\Virtual Pet(1)\\Virtual Pet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shahe\\Downloads\\Virtual Pet(1)\\Virtual Pet\\Assets\\Scripts\\CampFireInteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CampFireInteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shahe\\Downloads\\Virtual Pet(1)\\Virtual Pet\\Assets\\Scripts\\math.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\math.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shahe\\Downloads\\Virtual Pet(1)\\Virtual Pet\\Assets\\Scripts\\Shapes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Shapes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shahe\\Downloads\\Virtual Pet(1)\\Virtual Pet\\Assets\\Scripts\\Fruit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Fruit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shahe\\Downloads\\Virtual Pet(1)\\Virtual Pet\\Assets\\Scripts\\Stranger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Stranger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shahe\\Downloads\\Virtual Pet(1)\\Virtual Pet\\Assets\\Scripts\\AnimalRender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\AnimalRender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "math.cs",
+              "DocumentMoniker": "C:\\Users\\shahe\\Downloads\\Virtual Pet(1)\\Virtual Pet\\Assets\\Scripts\\math.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\math.cs",
+              "ToolTip": "C:\\Users\\shahe\\Downloads\\Virtual Pet(1)\\Virtual Pet\\Assets\\Scripts\\math.cs",
+              "RelativeToolTip": "Assets\\Scripts\\math.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T21:05:41.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Shapes.cs",
+              "DocumentMoniker": "C:\\Users\\shahe\\Downloads\\Virtual Pet(1)\\Virtual Pet\\Assets\\Scripts\\Shapes.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Shapes.cs",
+              "ToolTip": "C:\\Users\\shahe\\Downloads\\Virtual Pet(1)\\Virtual Pet\\Assets\\Scripts\\Shapes.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Shapes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T20:40:24.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Stranger.cs",
+              "DocumentMoniker": "C:\\Users\\shahe\\Downloads\\Virtual Pet(1)\\Virtual Pet\\Assets\\Scripts\\Stranger.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Stranger.cs",
+              "ToolTip": "C:\\Users\\shahe\\Downloads\\Virtual Pet(1)\\Virtual Pet\\Assets\\Scripts\\Stranger.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Stranger.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAIBJwGIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T18:23:16.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AnimalRender.cs",
+              "DocumentMoniker": "C:\\Users\\shahe\\Downloads\\Virtual Pet(1)\\Virtual Pet\\Assets\\Scripts\\AnimalRender.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AnimalRender.cs",
+              "ToolTip": "C:\\Users\\shahe\\Downloads\\Virtual Pet(1)\\Virtual Pet\\Assets\\Scripts\\AnimalRender.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AnimalRender.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAHMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T16:55:01.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Fruit.cs",
+              "DocumentMoniker": "C:\\Users\\shahe\\Downloads\\Virtual Pet(1)\\Virtual Pet\\Assets\\Scripts\\Fruit.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Fruit.cs",
+              "ToolTip": "C:\\Users\\shahe\\Downloads\\Virtual Pet(1)\\Virtual Pet\\Assets\\Scripts\\Fruit.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Fruit.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAwwDEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T10:20:14.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CampFireInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\shahe\\Downloads\\Virtual Pet(1)\\Virtual Pet\\Assets\\Scripts\\CampFireInteraction.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CampFireInteraction.cs",
+              "ToolTip": "C:\\Users\\shahe\\Downloads\\Virtual Pet(1)\\Virtual Pet\\Assets\\Scripts\\CampFireInteraction.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CampFireInteraction.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T21:50:10.097Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
