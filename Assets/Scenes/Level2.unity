@@ -3490,7 +3490,7 @@ GameObject:
   - component: {fileID: 1395559770}
   - component: {fileID: 1395559769}
   m_Layer: 0
-  m_Name: FruitGame
+  m_Name: ColorInteraction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

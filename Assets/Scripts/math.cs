@@ -1,7 +1,6 @@
 using UnityEngine;
-using TMPro; // Required for TextMeshPro components
-using System.Collections; // Required for IEnumerator
-using UnityEngine.EventSystems; // Required for detecting clicks
+using TMPro;
+using System.Collections;
 
 public class MathInteraction : MonoBehaviour
 {
@@ -9,13 +8,14 @@ public class MathInteraction : MonoBehaviour
     public GameObject four;
     public GameObject five;
     public GameObject fence;
-    public GameObject canvas; // Reference to the Canvas GameObject
-    public TMP_Text consoleText; // Reference to the TextMeshPro component
+    public GameObject canvas;
+    public TMP_Text consoleText;
     public GameObject prompt;
 
     private GameObject[] numbers;
     private int correctAnswer;
-    private bool taskCompleted = false; // Flag to check if the task is completed
+    private bool taskCompleted = false;
+    private bool numbersMadeVisible = false;
 
     void Start()
     {
@@ -24,48 +24,68 @@ public class MathInteraction : MonoBehaviour
         // Initially set all numbers to be invisible
         foreach (var numObj in numbers)
         {
+            if (numObj == null)
+            {
+                Debug.LogError("A number GameObject is missing in the Inspector!");
+                continue;
+            }
+
             numObj.SetActive(false);
-            BoxCollider collider = numObj.AddComponent<BoxCollider>();
-            collider.isTrigger = false; // Ensure it is not a trigger
+            if (numObj.GetComponent<BoxCollider>() == null)
+            {
+                BoxCollider collider = numObj.AddComponent<BoxCollider>();
+                collider.isTrigger = false;
+            }
         }
 
-        // Generate a simple math question that results in 3, 4, or 5
-        int a = Random.Range(1, 3);
-        int b = Random.Range(2, 4);
-        correctAnswer = a + b;
-        ShowCanvas($"Solve: {a} + {b} = ?");
-        Debug.Log("Correct Answer: " + correctAnswer);
+        // Initially hide UI elements
+        if (canvas != null) canvas.SetActive(false);
+        if (prompt != null) prompt.SetActive(false);
     }
 
     void Update()
     {
-        if (taskCompleted) return; // Skip further checks if the task is completed
+        if (taskCompleted) return;
 
         bool isWithinRange = false;
 
         foreach (var numObj in numbers)
         {
+            if (numObj == null) continue;
+
             float distance = Vector3.Distance(numObj.transform.position, Camera.main.transform.position);
-            Debug.Log("Distance to " + numObj.name + ": " + distance);
 
-            if (distance < 5f) // Object becomes visible when the player is near
+            if (distance < 5f)
             {
-                isWithinRange = true; // Mark that the player is in range
-                prompt.SetActive(true);
+                isWithinRange = true;
 
-                foreach (var obj in numbers)
+                if (!numbersMadeVisible) // Generate question only once when numbers become visible
                 {
-                    obj.SetActive(true);
+                    numbersMadeVisible = true;
+                    GenerateMathQuestion();
+                    ShowCanvas($"Solve: {correctAnswer - Random.Range(1, 3)} + {Random.Range(1, 3)} = ?");
+
+                    if (prompt != null) prompt.SetActive(true);
+
+                    foreach (var obj in numbers)
+                    {
+                        obj.SetActive(true);
+                    }
                 }
             }
         }
 
-        if (!isWithinRange)
+        if (!isWithinRange && numbersMadeVisible)
         {
-            prompt.SetActive(false);
+            if (prompt != null) prompt.SetActive(false);
         }
 
-        if (Input.GetMouseButtonDown(0)) // Left mouse button click
+        HandleClickDetection();
+    }
+
+    void HandleClickDetection()
+    {
+        if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -73,46 +93,71 @@ public class MathInteraction : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 GameObject clickedObject = hit.collider.gameObject;
-                if (clickedObject.name == correctAnswer.ToString())
-                {
-                    taskCompleted = true;
-                    ShowCanvas("Good Job!");
-                    Debug.Log("Correct answer clicked: " + clickedObject.name);
 
-                    foreach (var obj in numbers)
-                    {
-                        Destroy(obj);
-                    }
-                    Destroy(fence);
-                    StartCoroutine(CompleteTaskWithDelay(2f));
+                // Check if clicked object's name matches correct answer numerically or textually
+                if (clickedObject.name == correctAnswer.ToString() || 
+                    clickedObject.name.ToLower() == NumberToWord(correctAnswer))
+                {
+                    Debug.Log("Correct answer clicked: " + clickedObject.name);
+                    TaskCompleted();
+                }
+                else
+                {
+                    Debug.Log("Incorrect answer: " + clickedObject.name);
                 }
             }
         }
     }
 
-    // Method to show and update the canvas text
-    void ShowCanvas(string message)
+    void GenerateMathQuestion()
     {
-        if (canvas != null)
-        {
-            canvas.SetActive(true); // Show the canvas
-        }
-        if (consoleText != null)
-        {
-            consoleText.text = message;
-        }
-        Debug.Log("Canvas Message: " + message);
+        int[][] possiblePairs = { new int[] { 1, 2 }, new int[] { 2, 2 }, new int[] { 2, 3 } };
+        int[] selectedPair = possiblePairs[Random.Range(0, possiblePairs.Length)];
+        int a = selectedPair[0], b = selectedPair[1];
+        correctAnswer = a + b;
+        Debug.Log($"New Question Generated: {a} + {b} = {correctAnswer}");
     }
 
-    // Coroutine to wait before completing the task
+    void ShowCanvas(string message)
+    {
+        if (canvas != null) canvas.SetActive(true);
+        if (consoleText != null) consoleText.text = message;
+        Debug.Log("Canvas Message Updated: " + message);
+    }
+
+    void TaskCompleted()
+    {
+        taskCompleted = true;
+        ShowCanvas("Good Job!");
+
+        foreach (var obj in numbers)
+        {
+            Destroy(obj);
+        }
+        Destroy(fence);
+        StartCoroutine(CompleteTaskWithDelay(2f));
+    }
+
     private IEnumerator CompleteTaskWithDelay(float delay)
     {
-        yield return new WaitForSeconds(delay); // Wait for the specified delay
-        if (prompt != null)
-        {
-            prompt.SetActive(false);
-        }
+        yield return new WaitForSeconds(delay);
+
+        if (consoleText != null) consoleText.text = "";
+        if (prompt != null) prompt.SetActive(false);
+        if (canvas != null) canvas.SetActive(false);
+
         Debug.Log("Task completed, deactivating object.");
-        gameObject.SetActive(false); // Deactivate this script's GameObject
+        gameObject.SetActive(false);
+    }
+
+    string NumberToWord(int number)
+    {
+        switch (number)
+        {
+            case 3: return "three";
+            case 4: return "four";
+            case 5: return "five";
+            default: return number.ToString();
+        }
     }
 }
