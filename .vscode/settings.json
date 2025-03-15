@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Virtual Pet.sln"
+    "dotnet.defaultSolution": "VirtualPet.sln"
 }
