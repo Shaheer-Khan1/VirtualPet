@@ -1,0 +1,81 @@
+# Unity generated files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+Assets/Plugins/*/Android/libs/
+Assets/Plugins/*/Android/libs.meta
+
+# Auto-generated VS/JetBrains Rider files
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+
+# Logs and local settings
+*.log
+Logs/
+Logs.meta
+crashlytics-build.properties
+
+# Unity cache and settings
+MemoryCaptures/
+MemoryCaptures.meta
+UnityGenerated/
+
+# TextMeshPro generated files
+Assets/TextMesh Pro/Resources/*.asset
+
+# User-specific files
+*.swp
+*.lock
+*.lock.json
+*.log
+*.log.*
+*.gid
+*.gz
+*.vscode/
+*.idea/
+*.vs/
+.DS_Store
+*.pyc
+Thumbs.db
+Desktop.ini
+
+# Packed builds
+*.apk
+*.aab
+*.ipa
+*.unitypackage
+
+# Rider project files
+.idea/
+
+# Exclude .env or secret files
+.env
+.env.local
+.env.*.local
+
+# If using URP or shader caches
+*.shadercache
+*.shadercache.meta
+
+# Ignore Play mode test results
+Assets/StreamingAssets/PlayerTestResults/
+
+# Ignore generated Visual Studio solution files
+ExportedObj/
+.consulo/
+.vscode/
+
+# Ignore ProBuilder autosave files
+Assets/ProBuilder
