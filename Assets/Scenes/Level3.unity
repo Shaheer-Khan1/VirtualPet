@@ -5375,7 +5375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  rotationSpeed: 700
+  rotationSpeed: 400
   gravity: -9.81
 --- !u!95 &1694057340
 Animator:
